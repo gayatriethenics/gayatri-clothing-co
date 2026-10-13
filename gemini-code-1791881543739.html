@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAYATRI CLOTHING CO. | Style for Every You</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-ivory: #FAF7F2;
+            --bg-card: #FFFFFF;
+            --color-burgundy: #58111A;
+            --color-burgundy-light: #7A1C28;
+            --color-gold: #D4AF37;
+            --color-gold-light: #F3E5AB;
+            --color-text-dark: #222222;
+            --color-text-muted: #666666;
+            --color-border: #E8E2D9;
+            --shadow-subtle: 0 10px 30px rgba(88, 17, 26, 0.05);
+            --shadow-hover: 0 15px 35px rgba(88, 17, 26, 0.12);
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-ivory);
+            color: var(--color-text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .font-serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        /* Top Announcement Bar */
+        .top-bar {
+            background-color: var(--color-burgundy);
+            color: var(--bg-ivory);
+            text-align: center;
+            padding: 8px 15px;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: rgba(250, 247, 242, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--color-border);
+            transition: var(--transition);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .brand-logo {
+            text-align: center;
+        }
+
+        .brand-logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--color-burgundy);
+            line-height: 1;
+        }
+
+        .brand-logo span.tagline {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.65rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--color-gold);
+            display: block;
+            margin-top: 4px;
+            font-weight: 500;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-link {
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--color-text-dark);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1.5px;
+            background-color: var(--color-burgundy);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover {
+            color: var(--color-burgundy);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .mobile-toggle {
+            display: none;
+            font-size: 1.5rem;
+            color: var(--color-burgundy);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            padding: 100px 0 120px 0;
+            background: linear-gradient(135deg, rgba(250, 247, 242, 0.9) 0%, rgba(243, 229, 171, 0.2) 100%), url('kurti-01.jpg') center/cover no-repeat;
+            border-bottom: 1px solid var(--color-border);
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .hero-sub {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--color-gold);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .hero h2 {
+            font-size: 3.2rem;
+            color: var(--color-burgundy);
+            margin-bottom: 20px;
+            line-height: 1.15;
+            font-weight: 600;
+        }
+
+        .hero p {
+            font-size: 1.05rem;
+            color: var(--color-text-muted);
+            margin-bottom: 35px;
+            font-weight: 300;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 35px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-primary {
+            background-color: var(--color-burgundy);
+            color: var(--bg-ivory);
+            border: 1px solid var(--color-burgundy);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--color-burgundy-light);
+            box-shadow: 0 5px 15px rgba(88, 17, 26, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .btn-meesho {
+            background-color: #9C27B0;
+            color: #FFFFFF;
+            border: 1px solid #9C27B0;
+        }
+
+        .btn-meesho:hover {
+            background-color: #7B1FA2;
+            box-shadow: 0 5px 15px rgba(156, 39, 176, 0.25);
+            transform: translateY(-2px);
+        }
+
+        /* Section Styling */
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h3 {
+            font-size: 2.5rem;
+            color: var(--color-burgundy);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            font-size: 0.9rem;
+            color: var(--color-gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background-color: var(--color-gold);
+            margin: 15px auto 0 auto;
+        }
+
+        /* Our Collection Section */
+        .collection-section {
+            padding: 100px 0;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 35px;
+        }
+
+        .product-card {
+            background-color: var(--bg-card);
+            border: 1
